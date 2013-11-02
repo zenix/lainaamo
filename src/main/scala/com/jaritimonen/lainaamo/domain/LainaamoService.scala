@@ -16,4 +16,8 @@ class LainaamoService {
     BookRepository.find(MongoDBObject.empty).toList
   }
 
+  def insertBook(book: Book) = {
+    BookRepository.insert(book)
+  }
+
 }
