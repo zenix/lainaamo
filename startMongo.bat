@@ -1,0 +1,1 @@
+e:\projects\mongodb\bin\mongod.exe --rest --dbpath e:\projects\lainaamo\data
