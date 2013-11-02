@@ -1,0 +1,12 @@
+{
+    "name": "Kirja",
+    "isbn10": "93290320932",
+    "isbn13": "jkk32kj32kl32",
+    "authors": [
+        {
+            "firstName": "Jari",
+            "lastName": "Timonen"
+        }
+    ],
+    "description": "huono kirja"
+}

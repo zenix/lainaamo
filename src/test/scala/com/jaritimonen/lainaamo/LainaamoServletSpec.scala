@@ -1,6 +1,7 @@
 package com.jaritimonen.lainaamo
 
 import org.scalatra.test.specs2._
+import com.jaritimonen.lainaamo.ui.LainaamoServlet
 
 // For more on Specs2, see http://etorreborre.github.com/specs2/guide/org.specs2.guide.QuickStart.html
 class LainaamoServletSpec extends ScalatraSpec { def is =
