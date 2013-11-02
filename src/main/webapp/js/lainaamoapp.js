@@ -1,0 +1,1 @@
+var lainaamoApp = angular.module('lainaamoApp', ['ngRoute', 'lainaamoControllers']);

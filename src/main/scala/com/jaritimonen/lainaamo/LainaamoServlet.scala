@@ -3,9 +3,9 @@ package com.jaritimonen.lainaamo
 import org.scalatra._
 import scalate.ScalateSupport
 
-class LainaamoServlet extends LainaamoStack {
+class LainaamoServlet extends ScalatraServlet {
 
-  get("/") {
+  get("/get") {
     <html>
       <body>
         <h1>Hello, world!</h1>

@@ -1,0 +1,1 @@
+var bookListController = angular.module('lainaamoControllers',[])                 ;
