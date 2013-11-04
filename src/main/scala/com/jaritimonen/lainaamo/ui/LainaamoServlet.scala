@@ -21,4 +21,8 @@ abstract class LainaamoServlet extends ScalatraServlet with JacksonJsonSupport  
   post("/book") {
     lainaamoService.insertBook(parsedBody.extract[Book])
   }
+
+  get("/book/find/by/name/:name"){
+    lainaamoService.findByName(params("name"))
+  }
 }
