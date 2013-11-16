@@ -6,7 +6,7 @@ import com.mongodb.casbah.Imports._
 
 class LainaamoService {
   def findByName(name: String): List[Book] = {
-    val toFind = "^" + name +".*"
+    val toFind = "(?i).*" + name +".*"
     BookRepository.find(MongoDBObject("name" -> toFind.r)).toList
   }
 
