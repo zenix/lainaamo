@@ -4,19 +4,23 @@ import com.jaritimonen.lainaamo.infrastructure.BookRepository
 import com.mongodb.casbah.commons.MongoDBObject
 import com.mongodb.casbah.Imports._
 
-class LainaamoService {
+abstract class LainaamoService {
+  //TODO: Connection is left open.
+  var bookRespository: BookRepository
   def findByName(name: String): List[Book] = {
-    val toFind = "(?i).*" + name +".*"
-    BookRepository.find(MongoDBObject("name" -> toFind.r)).toList
+    bookRespository.findByName(name)
   }
 
-  def getAllBooks():List[Book] = {
-    //TODO: Connection is left open.
+  /*def getAllBooks():List[Book] = {
     BookRepository.find(MongoDBObject.empty).toList
-  }
+  } */
 
   def insertBook(book: Book) = {
-    BookRepository.insert(book)
+    bookRespository.insert(book)
   }
+
+  /*def deleteBook(name: String) = {
+    BookRepository.remove(findByName(name).head)
+  } */
 
 }

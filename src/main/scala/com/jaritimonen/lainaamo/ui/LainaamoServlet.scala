@@ -15,7 +15,6 @@ abstract class LainaamoServlet extends ScalatraServlet with JacksonJsonSupport  
   }
 
   get("/books") {
-   lainaamoService.getAllBooks()
   }
 
   post("/book") {
@@ -24,5 +23,8 @@ abstract class LainaamoServlet extends ScalatraServlet with JacksonJsonSupport  
 
   get("/book/find/by/name/:name"){
     lainaamoService.findByName(params("name"))
+  }
+
+  delete("/book/delete/by/name/:name"){
   }
 }
