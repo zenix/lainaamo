@@ -22,7 +22,7 @@ abstract class BookRepository {
   }
 
   def toBook(dbObject: DBObject): Book = {
-   Book(dbObject._id, dbObject.as[String]("name"),dbObject.as[String]("isbn10"), dbObject.as[String]("isbn13"), toAuthors(dbObject.as[MongoDBList]("authors")), dbObject.as[String]("description"))
+   Book(Some(dbObject._id.get.toString), dbObject.as[String]("name"),dbObject.as[String]("isbn10"), dbObject.as[String]("isbn13"), toAuthors(dbObject.as[MongoDBList]("authors")), dbObject.as[String]("description"))
   }
 
   def toAuthors(authors: MongoDBList): List[Author] = {
