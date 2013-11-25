@@ -11,16 +11,16 @@ abstract class LainaamoService {
     bookRespository.findByName(name)
   }
 
-  /*def getAllBooks():List[Book] = {
-    BookRepository.find(MongoDBObject.empty).toList
-  } */
+  def getAllBooks():List[Book] = {
+    bookRespository.findAll()
+  }
 
   def insertBook(book: Book) = {
     bookRespository.insert(book)
   }
 
-  /*def deleteBook(name: String) = {
-    BookRepository.remove(findByName(name).head)
-  } */
+  def deleteBook(name: String) = {
+    bookRespository.remove(name)
+  }
 
 }
